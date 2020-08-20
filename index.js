@@ -36,7 +36,7 @@ app.get('/authors/1/:name', (req,res) => {
     // const {name} = req.params;
 
     res.send('Beowulf');
-    // res.send(`${name}`);
+    // res.send(`${req.param.name}`);
 });
 app.get('/authors/2/:name', (req,res) => {
     console.log('GET /authors/2/:name');
@@ -63,7 +63,7 @@ app.get('/authors/4/:name', (req,res) => {
     res.send('The Picture of Dorian Gray, The Importance of Being Earnest');
 });
 
-app.get('/bonjour/:name/books/:books', (req, res) => {
+app.get('/authors/:name/books/:books', (req, res) => {
     console.log('GET /bonjour/:name/books/:books');
     console.log('req.params', req.params);
 
